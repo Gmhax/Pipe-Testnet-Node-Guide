@@ -75,15 +75,15 @@ sudo mkdir -p /opt/popcache/logs
 - Drag and drop your pop binary file to your Left screen To Right VPS's Home path.
 - Now move & Unrap the pop file with following these commands!
 ```bash
-sudo mv ~/pop-v0.3.1-linux-x64.tar.gz /opt/popcache/
+sudo mv ~/pop-v0.3.2-linux-x64.tar.gz /opt/popcache/
 ```
 ```bash
 cd /opt/popcache/
 ```
 ```bash
-sudo tar -xzf pop-v0.3.1-linux-x64.tar.gz
+sudo tar -xzf pop-v0.3.2-linux-x64.tar.gz
 sudo chmod +x ./pop
-chmod 777 pop-v0.3.1-linux-x64.tar.gz
+chmod 777 pop-v0.3.2-linux-x64.tar.gz
 sudo ln -sf /opt/popcache/pop /usr/local/bin/pop
 ```
 ## Set Configuration File
@@ -206,7 +206,23 @@ sudo rm ~/opt/popcache/logs/stderr.log
 sudo rm ~/opt/popcache/logs/stdout.log
 ```
 
-- Now follow the Download the binary process:
+- Now follow the [Download the binary](https://github.com/Gmhax/Pipe-Testnet-Node-Guide?tab=readme-ov-file#download-the-binary) process:
+- After that Reload & Start the service:
+```bash
+sudo systemctl daemon-reload
+```
+```bash
+sudo systemctl start popcache
+```
+- Check node Status
+```bash
+sudo systemctl status popcache
+```
+
+```bash
+tail -f /opt/popcache/logs/stdout.log
+```
+
 
 
 
